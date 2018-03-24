@@ -1,0 +1,534 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		514683292065567800358A57 /* AppHookSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 514683272065567800358A57 /* AppHookSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51468332206556C400358A57 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 51468330206556C400358A57 /* GCDAsyncSocket.m */; };
+		623E7B3320662A0E00CE79A0 /* HKSocketServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 623E7B3120662A0E00CE79A0 /* HKSocketServer.m */; };
+		623E7B3420662A0E00CE79A0 /* HKSocketServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 623E7B3220662A0E00CE79A0 /* HKSocketServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		623E7B3820662D1E00CE79A0 /* HKSocketServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 623E7B3120662A0E00CE79A0 /* HKSocketServer.m */; };
+		623E7B3920662D1E00CE79A0 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 51468330206556C400358A57 /* GCDAsyncSocket.m */; };
+		623E7B4A206635E600CE79A0 /* HKSocketClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 623E7B48206635E600CE79A0 /* HKSocketClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		623E7B4B206635E600CE79A0 /* HKSocketClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 623E7B49206635E600CE79A0 /* HKSocketClient.m */; };
+		623E7B4E2066361C00CE79A0 /* HKSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 623E7B4C2066361C00CE79A0 /* HKSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		623E7B4F2066361C00CE79A0 /* HKSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 623E7B4D2066361C00CE79A0 /* HKSocket.m */; };
+		623E7B52206638D400CE79A0 /* HKSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 623E7B4D2066361C00CE79A0 /* HKSocket.m */; };
+		623E7B532066397000CE79A0 /* HKSocketClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 623E7B49206635E600CE79A0 /* HKSocketClient.m */; };
+		623E7B5520663A3900CE79A0 /* AppHookSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 514683272065567800358A57 /* AppHookSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		623E7B5620663A4400CE79A0 /* AppHookSDK-PrefixHeader.pch in Headers */ = {isa = PBXBuildFile; fileRef = 623E7B3520662BC600CE79A0 /* AppHookSDK-PrefixHeader.pch */; settings = {ATTRIBUTES = (Public, ); }; };
+		623E7B5720663A7800CE79A0 /* HKSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 623E7B4C2066361C00CE79A0 /* HKSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		623E7B5820663A7900CE79A0 /* HKSocketServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 623E7B3220662A0E00CE79A0 /* HKSocketServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		623E7B5920663A7B00CE79A0 /* HKSocketClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 623E7B48206635E600CE79A0 /* HKSocketClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		623E7B5A20663A7E00CE79A0 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 5146832F206556C400358A57 /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		623E7B5E20664C8000CE79A0 /* HKParseCommand_iOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 623E7B5C20664C8000CE79A0 /* HKParseCommand_iOS.m */; };
+		623E7B6120664D3800CE79A0 /* HKParseCommand_Mac.m in Sources */ = {isa = PBXBuildFile; fileRef = 623E7B5F20664D2300CE79A0 /* HKParseCommand_Mac.m */; };
+		623E7B6220664E9D00CE79A0 /* AppHookSDK-PrefixHeader.pch in Headers */ = {isa = PBXBuildFile; fileRef = 623E7B3520662BC600CE79A0 /* AppHookSDK-PrefixHeader.pch */; settings = {ATTRIBUTES = (Public, ); }; };
+		623E7B6320664EA900CE79A0 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 5146832F206556C400358A57 /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		514683242065567800358A57 /* AppHookSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppHookSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		514683272065567800358A57 /* AppHookSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppHookSDK.h; sourceTree = "<group>"; };
+		514683282065567800358A57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5146832F206556C400358A57 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		51468330206556C400358A57 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		623E7B3120662A0E00CE79A0 /* HKSocketServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKSocketServer.m; sourceTree = "<group>"; };
+		623E7B3220662A0E00CE79A0 /* HKSocketServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKSocketServer.h; sourceTree = "<group>"; };
+		623E7B3520662BC600CE79A0 /* AppHookSDK-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppHookSDK-PrefixHeader.pch"; sourceTree = "<group>"; };
+		623E7B4220662D1E00CE79A0 /* AppHookSDK_Mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppHookSDK_Mac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		623E7B48206635E600CE79A0 /* HKSocketClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HKSocketClient.h; sourceTree = "<group>"; };
+		623E7B49206635E600CE79A0 /* HKSocketClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HKSocketClient.m; sourceTree = "<group>"; };
+		623E7B4C2066361C00CE79A0 /* HKSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HKSocket.h; sourceTree = "<group>"; };
+		623E7B4D2066361C00CE79A0 /* HKSocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HKSocket.m; sourceTree = "<group>"; };
+		623E7B5B20664C8000CE79A0 /* HKParseCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HKParseCommand.h; sourceTree = "<group>"; };
+		623E7B5C20664C8000CE79A0 /* HKParseCommand_iOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HKParseCommand_iOS.m; sourceTree = "<group>"; };
+		623E7B5F20664D2300CE79A0 /* HKParseCommand_Mac.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HKParseCommand_Mac.m; sourceTree = "<group>"; };
+		623E7B692066538D00CE79A0 /* Script.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Script.sh; sourceTree = "<group>"; };
+		623E7B6B206654CB00CE79A0 /* AppHookSDK_Mac.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppHookSDK_Mac.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		514683202065567800358A57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		623E7B3A20662D1E00CE79A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5146831A2065567800358A57 = {
+			isa = PBXGroup;
+			children = (
+				623E7B692066538D00CE79A0 /* Script.sh */,
+				514683262065567800358A57 /* AppHookSDK */,
+				514683252065567800358A57 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		514683252065567800358A57 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				514683242065567800358A57 /* AppHookSDK.framework */,
+				623E7B4220662D1E00CE79A0 /* AppHookSDK_Mac.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		514683262065567800358A57 /* AppHookSDK */ = {
+			isa = PBXGroup;
+			children = (
+				623E7B6B206654CB00CE79A0 /* AppHookSDK_Mac.plist */,
+				514683272065567800358A57 /* AppHookSDK.h */,
+				623E7B3520662BC600CE79A0 /* AppHookSDK-PrefixHeader.pch */,
+				623E7B4C2066361C00CE79A0 /* HKSocket.h */,
+				623E7B4D2066361C00CE79A0 /* HKSocket.m */,
+				623E7B3220662A0E00CE79A0 /* HKSocketServer.h */,
+				623E7B3120662A0E00CE79A0 /* HKSocketServer.m */,
+				623E7B5B20664C8000CE79A0 /* HKParseCommand.h */,
+				623E7B5C20664C8000CE79A0 /* HKParseCommand_iOS.m */,
+				623E7B5F20664D2300CE79A0 /* HKParseCommand_Mac.m */,
+				623E7B48206635E600CE79A0 /* HKSocketClient.h */,
+				623E7B49206635E600CE79A0 /* HKSocketClient.m */,
+				5146832F206556C400358A57 /* GCDAsyncSocket.h */,
+				51468330206556C400358A57 /* GCDAsyncSocket.m */,
+				514683282065567800358A57 /* Info.plist */,
+			);
+			path = AppHookSDK;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		514683212065567800358A57 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				514683292065567800358A57 /* AppHookSDK.h in Headers */,
+				623E7B6220664E9D00CE79A0 /* AppHookSDK-PrefixHeader.pch in Headers */,
+				623E7B4E2066361C00CE79A0 /* HKSocket.h in Headers */,
+				623E7B3420662A0E00CE79A0 /* HKSocketServer.h in Headers */,
+				623E7B4A206635E600CE79A0 /* HKSocketClient.h in Headers */,
+				623E7B6320664EA900CE79A0 /* GCDAsyncSocket.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		623E7B3B20662D1E00CE79A0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				623E7B5520663A3900CE79A0 /* AppHookSDK.h in Headers */,
+				623E7B5720663A7800CE79A0 /* HKSocket.h in Headers */,
+				623E7B5820663A7900CE79A0 /* HKSocketServer.h in Headers */,
+				623E7B5920663A7B00CE79A0 /* HKSocketClient.h in Headers */,
+				623E7B5A20663A7E00CE79A0 /* GCDAsyncSocket.h in Headers */,
+				623E7B5620663A4400CE79A0 /* AppHookSDK-PrefixHeader.pch in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		514683232065567800358A57 /* AppHookSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5146832C2065567800358A57 /* Build configuration list for PBXNativeTarget "AppHookSDK" */;
+			buildPhases = (
+				5146831F2065567800358A57 /* Sources */,
+				514683202065567800358A57 /* Frameworks */,
+				514683212065567800358A57 /* Headers */,
+				514683222065567800358A57 /* Resources */,
+				623E7B6A2066539200CE79A0 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AppHookSDK;
+			productName = AppHookSDK;
+			productReference = 514683242065567800358A57 /* AppHookSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		623E7B3620662D1E00CE79A0 /* AppHookSDK_Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 623E7B3F20662D1E00CE79A0 /* Build configuration list for PBXNativeTarget "AppHookSDK_Mac" */;
+			buildPhases = (
+				623E7B3720662D1E00CE79A0 /* Sources */,
+				623E7B3A20662D1E00CE79A0 /* Frameworks */,
+				623E7B3B20662D1E00CE79A0 /* Headers */,
+				623E7B3E20662D1E00CE79A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AppHookSDK_Mac;
+			productName = AppHookSDK;
+			productReference = 623E7B4220662D1E00CE79A0 /* AppHookSDK_Mac.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5146831B2065567800358A57 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "李铁柱";
+				TargetAttributes = {
+					514683232065567800358A57 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Manual;
+					};
+					623E7B3620662D1E00CE79A0 = {
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 5146831E2065567800358A57 /* Build configuration list for PBXProject "AppHookSDK" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5146831A2065567800358A57;
+			productRefGroup = 514683252065567800358A57 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				514683232065567800358A57 /* AppHookSDK */,
+				623E7B3620662D1E00CE79A0 /* AppHookSDK_Mac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		514683222065567800358A57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		623E7B3E20662D1E00CE79A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		623E7B6A2066539200CE79A0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "sh $PROJECT_DIR/Script.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5146831F2065567800358A57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				623E7B5E20664C8000CE79A0 /* HKParseCommand_iOS.m in Sources */,
+				623E7B4B206635E600CE79A0 /* HKSocketClient.m in Sources */,
+				623E7B4F2066361C00CE79A0 /* HKSocket.m in Sources */,
+				623E7B3320662A0E00CE79A0 /* HKSocketServer.m in Sources */,
+				51468332206556C400358A57 /* GCDAsyncSocket.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		623E7B3720662D1E00CE79A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				623E7B3820662D1E00CE79A0 /* HKSocketServer.m in Sources */,
+				623E7B52206638D400CE79A0 /* HKSocket.m in Sources */,
+				623E7B532066397000CE79A0 /* HKSocketClient.m in Sources */,
+				623E7B6120664D3800CE79A0 /* HKParseCommand_Mac.m in Sources */,
+				623E7B3920662D1E00CE79A0 /* GCDAsyncSocket.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5146832A2065567800358A57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5146832B2065567800358A57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5146832D2065567800358A57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7,
+				);
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@executable_path";
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/AppHookSDK/AppHookSDK-PrefixHeader.pch";
+				INFOPLIST_FILE = AppHookSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ltz.AppHookSDK;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = Debug;
+		};
+		5146832E2065567800358A57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7,
+				);
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@executable_path";
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/AppHookSDK/AppHookSDK-PrefixHeader.pch";
+				INFOPLIST_FILE = AppHookSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ltz.AppHookSDK;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = Release;
+		};
+		623E7B4020662D1E00CE79A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@executable_path";
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/AppHookSDK/AppHookSDK-PrefixHeader.pch";
+				INFOPLIST_FILE = AppHookSDK/AppHookSDK_Mac.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ltz.AppHookSDK-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = x86_64;
+			};
+			name = Debug;
+		};
+		623E7B4120662D1E00CE79A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@executable_path";
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/AppHookSDK/AppHookSDK-PrefixHeader.pch";
+				INFOPLIST_FILE = AppHookSDK/AppHookSDK_Mac.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ltz.AppHookSDK-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = x86_64;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5146831E2065567800358A57 /* Build configuration list for PBXProject "AppHookSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5146832A2065567800358A57 /* Debug */,
+				5146832B2065567800358A57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5146832C2065567800358A57 /* Build configuration list for PBXNativeTarget "AppHookSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5146832D2065567800358A57 /* Debug */,
+				5146832E2065567800358A57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		623E7B3F20662D1E00CE79A0 /* Build configuration list for PBXNativeTarget "AppHookSDK_Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				623E7B4020662D1E00CE79A0 /* Debug */,
+				623E7B4120662D1E00CE79A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5146831B2065567800358A57 /* Project object */;
+}
