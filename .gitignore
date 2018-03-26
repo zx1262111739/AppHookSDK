@@ -62,5 +62,5 @@ fastlane/test_output
 
 iOSInjectionProject/
 .DS_Store
-*/LatestBuild/
+/LatestBuild/
 AppHookSDK_Mac.framework/
