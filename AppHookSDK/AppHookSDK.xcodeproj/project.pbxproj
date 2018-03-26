@@ -35,6 +35,7 @@
 		62F34EF420689F4800F1A97D /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 62F34EEF20689F4800F1A97D /* GTMDefines.h */; };
 		62F34EF520689F4800F1A97D /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F34EF020689F4800F1A97D /* GTMBase64.m */; };
 		62F34EF620689F4800F1A97D /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F34EF020689F4800F1A97D /* GTMBase64.m */; };
+		62F34F2A2068FA8300F1A97D /* File in Resources */ = {isa = PBXBuildFile; fileRef = 62F34F292068FA8300F1A97D /* File */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		62F34EEE20689F4800F1A97D /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
 		62F34EEF20689F4800F1A97D /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
 		62F34EF020689F4800F1A97D /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+		62F34F292068FA8300F1A97D /* File */ = {isa = PBXFileReference; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			children = (
 				623E7B692066538D00CE79A0 /* Script.sh */,
 				62F34EDD20688F1600F1A97D /* Script_Mac.sh */,
+				62F34F292068FA8300F1A97D /* File */,
 				514683262065567800358A57 /* AppHookSDK */,
 				514683252065567800358A57 /* Products */,
 			);
@@ -247,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62F34F2A2068FA8300F1A97D /* File in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

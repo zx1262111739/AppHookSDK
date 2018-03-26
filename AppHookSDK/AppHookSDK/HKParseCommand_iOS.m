@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "HKParseCommand.h"
 #import "GTMBase64.h"
+#import <objc/runtime.h>
 
 @implementation HKParseCommand
 
@@ -19,22 +20,9 @@
         HKLog(@"receive command: %@", command);
         if ([command isEqualToString:@"screenshot"]) {
             
-            UIWindow * window = [[[UIApplication sharedApplication] delegate] window];
-            
-            UIGraphicsBeginImageContextWithOptions(window.bounds.size, NO, 0.0);
-            CGContextRef ctx = UIGraphicsGetCurrentContext();
-            [window.layer renderInContext:ctx];
-            UIImage * image = UIGraphicsGetImageFromCurrentImageContext();
-            UIGraphicsEndImageContext();
-            
-            
-            NSString * imageString = [GTMBase64 stringByEncodingData:UIImageJPEGRepresentation(image, 0.5)];
-            HKLog(@"%@", imageString);
-            if (completion) {
-                completion(@{@"command" : command, @"image": imageString});
-            }
+            UIWindow * window;
+//            [window touchesEnded:nil withEvent:nil]
         }
-        
     });
     
 }
