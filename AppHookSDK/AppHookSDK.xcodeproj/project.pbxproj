@@ -50,6 +50,7 @@
 		623E7B5F20664D2300CE79A0 /* HKParseCommand_Mac.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HKParseCommand_Mac.m; sourceTree = "<group>"; };
 		623E7B692066538D00CE79A0 /* Script.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Script.sh; sourceTree = "<group>"; };
 		623E7B6B206654CB00CE79A0 /* AppHookSDK_Mac.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppHookSDK_Mac.plist; sourceTree = "<group>"; };
+		62F34EDD20688F1600F1A97D /* Script_Mac.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Script_Mac.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				623E7B692066538D00CE79A0 /* Script.sh */,
+				62F34EDD20688F1600F1A97D /* Script_Mac.sh */,
 				514683262065567800358A57 /* AppHookSDK */,
 				514683252065567800358A57 /* Products */,
 			);
@@ -169,6 +171,7 @@
 				623E7B3A20662D1E00CE79A0 /* Frameworks */,
 				623E7B3B20662D1E00CE79A0 /* Headers */,
 				623E7B3E20662D1E00CE79A0 /* Resources */,
+				62F34EDE20688F4B00F1A97D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -245,6 +248,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "sh $PROJECT_DIR/Script.sh";
+		};
+		62F34EDE20688F4B00F1A97D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "sh $PROJECT_DIR/Script_Mac.sh";
 		};
 /* End PBXShellScriptBuildPhase section */
 
