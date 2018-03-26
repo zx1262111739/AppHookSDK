@@ -52,7 +52,8 @@
         scanf("%[^\n]", command);
         scanf("%c", &enterKey);
         
-        [client writeCommand:[NSString stringWithCString:command encoding:NSUTF8StringEncoding]];
+        [client writeMessage:@{@"command" : [NSString stringWithUTF8String:command]}];
+//        [client writeMessage:<#(NSString *)#>];
         command[0] = '\0';
     }
 
@@ -73,7 +74,7 @@
 //                scanf("%[^\n]", command);
 //                scanf("%c", &enterKey);
 //
-//                [client writeCommand:[NSString stringWithCString:command encoding:NSUTF8StringEncoding]];
+//                [client writeMessage:[NSString stringWithCString:command encoding:NSUTF8StringEncoding]];
 //                command[0] = '\0';
 //            }
 //        });

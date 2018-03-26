@@ -36,8 +36,10 @@
 }
 
 - (void)readPakcet:(HKSocketPacket *)packet socket:(GCDAsyncSocket *)socket {
-    [HKParseCommand parseCommand:packet.command completion:^{
-        
+    [HKParseCommand parseMessage:packet.message completion:^(NSDictionary<NSString *,id> * dict) {
+        HKSocketPacket * resPacket = [[HKSocketPacket alloc] init];
+        resPacket.message = dict;
+        [self writePacket:resPacket toSocket:socket];
     }];
 }
 

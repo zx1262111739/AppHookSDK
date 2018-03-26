@@ -10,6 +10,6 @@
 
 @interface HKSocketClient : HKSocket
 
-- (void)writeCommand:(NSString *)command;
+- (void)writeMessage:(NSDictionary *)message;
 - (void)connectIp:(NSString *)ip port:(UInt16)port;
 @end

@@ -9,7 +9,7 @@
 #import "HKParseCommand.h"
 
 @implementation HKParseCommand
-+ (void)parseCommand:(NSString *)command completion:(void (^) (void))completion {
++ (void)parseMessage:(NSDictionary *)message completion:(void (^) (NSDictionary <NSString *, id> * dict))completion {
     
 }
 @end

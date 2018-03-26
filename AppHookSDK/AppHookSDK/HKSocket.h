@@ -29,7 +29,8 @@
 @end
 
 @interface HKSocketPacket : NSObject
-@property (nonatomic, copy) NSString * command;
+
+@property (nonatomic, strong) NSDictionary * message;
 
 - (NSData *)coding;
 + (HKSocketPacket *)packetWithData:(NSData *)data outPacketLength:(UInt16 *)outPacketLength;

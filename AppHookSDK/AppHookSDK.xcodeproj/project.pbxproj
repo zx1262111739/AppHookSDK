@@ -29,6 +29,12 @@
 		623E7B6120664D3800CE79A0 /* HKParseCommand_Mac.m in Sources */ = {isa = PBXBuildFile; fileRef = 623E7B5F20664D2300CE79A0 /* HKParseCommand_Mac.m */; };
 		623E7B6220664E9D00CE79A0 /* AppHookSDK-PrefixHeader.pch in Headers */ = {isa = PBXBuildFile; fileRef = 623E7B3520662BC600CE79A0 /* AppHookSDK-PrefixHeader.pch */; settings = {ATTRIBUTES = (Public, ); }; };
 		623E7B6320664EA900CE79A0 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 5146832F206556C400358A57 /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62F34EF120689F4800F1A97D /* GTMBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = 62F34EEE20689F4800F1A97D /* GTMBase64.h */; };
+		62F34EF220689F4800F1A97D /* GTMBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = 62F34EEE20689F4800F1A97D /* GTMBase64.h */; };
+		62F34EF320689F4800F1A97D /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 62F34EEF20689F4800F1A97D /* GTMDefines.h */; };
+		62F34EF420689F4800F1A97D /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 62F34EEF20689F4800F1A97D /* GTMDefines.h */; };
+		62F34EF520689F4800F1A97D /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F34EF020689F4800F1A97D /* GTMBase64.m */; };
+		62F34EF620689F4800F1A97D /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F34EF020689F4800F1A97D /* GTMBase64.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +57,9 @@
 		623E7B692066538D00CE79A0 /* Script.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Script.sh; sourceTree = "<group>"; };
 		623E7B6B206654CB00CE79A0 /* AppHookSDK_Mac.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppHookSDK_Mac.plist; sourceTree = "<group>"; };
 		62F34EDD20688F1600F1A97D /* Script_Mac.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Script_Mac.sh; sourceTree = "<group>"; };
+		62F34EEE20689F4800F1A97D /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
+		62F34EEF20689F4800F1A97D /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		62F34EF020689F4800F1A97D /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +102,7 @@
 		514683262065567800358A57 /* AppHookSDK */ = {
 			isa = PBXGroup;
 			children = (
+				62F34EED20689F4800F1A97D /* GTMBase64 */,
 				623E7B6B206654CB00CE79A0 /* AppHookSDK_Mac.plist */,
 				514683272065567800358A57 /* AppHookSDK.h */,
 				623E7B3520662BC600CE79A0 /* AppHookSDK-PrefixHeader.pch */,
@@ -112,6 +122,16 @@
 			path = AppHookSDK;
 			sourceTree = "<group>";
 		};
+		62F34EED20689F4800F1A97D /* GTMBase64 */ = {
+			isa = PBXGroup;
+			children = (
+				62F34EEE20689F4800F1A97D /* GTMBase64.h */,
+				62F34EEF20689F4800F1A97D /* GTMDefines.h */,
+				62F34EF020689F4800F1A97D /* GTMBase64.m */,
+			);
+			path = GTMBase64;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -119,8 +139,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62F34EF320689F4800F1A97D /* GTMDefines.h in Headers */,
 				514683292065567800358A57 /* AppHookSDK.h in Headers */,
 				623E7B6220664E9D00CE79A0 /* AppHookSDK-PrefixHeader.pch in Headers */,
+				62F34EF120689F4800F1A97D /* GTMBase64.h in Headers */,
 				623E7B4E2066361C00CE79A0 /* HKSocket.h in Headers */,
 				623E7B3420662A0E00CE79A0 /* HKSocketServer.h in Headers */,
 				623E7B4A206635E600CE79A0 /* HKSocketClient.h in Headers */,
@@ -132,8 +154,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62F34EF420689F4800F1A97D /* GTMDefines.h in Headers */,
 				623E7B5520663A3900CE79A0 /* AppHookSDK.h in Headers */,
 				623E7B5720663A7800CE79A0 /* HKSocket.h in Headers */,
+				62F34EF220689F4800F1A97D /* GTMBase64.h in Headers */,
 				623E7B5820663A7900CE79A0 /* HKSocketServer.h in Headers */,
 				623E7B5920663A7B00CE79A0 /* HKSocketClient.h in Headers */,
 				623E7B5A20663A7E00CE79A0 /* GCDAsyncSocket.h in Headers */,
@@ -270,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				623E7B5E20664C8000CE79A0 /* HKParseCommand_iOS.m in Sources */,
+				62F34EF520689F4800F1A97D /* GTMBase64.m in Sources */,
 				623E7B4B206635E600CE79A0 /* HKSocketClient.m in Sources */,
 				623E7B4F2066361C00CE79A0 /* HKSocket.m in Sources */,
 				623E7B3320662A0E00CE79A0 /* HKSocketServer.m in Sources */,
@@ -282,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				623E7B3820662D1E00CE79A0 /* HKSocketServer.m in Sources */,
+				62F34EF620689F4800F1A97D /* GTMBase64.m in Sources */,
 				623E7B52206638D400CE79A0 /* HKSocket.m in Sources */,
 				623E7B532066397000CE79A0 /* HKSocketClient.m in Sources */,
 				623E7B6120664D3800CE79A0 /* HKParseCommand_Mac.m in Sources */,
@@ -416,6 +442,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@executable_path";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AppHookSDK",
+				);
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/AppHookSDK/AppHookSDK-PrefixHeader.pch";
 				INFOPLIST_FILE = AppHookSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -445,6 +475,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@executable_path";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AppHookSDK",
+				);
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/AppHookSDK/AppHookSDK-PrefixHeader.pch";
 				INFOPLIST_FILE = AppHookSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";

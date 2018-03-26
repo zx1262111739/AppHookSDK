@@ -7,6 +7,7 @@
 //
 
 #import "HKSocketClient.h"
+#import "GTMBase64.h"
 
 @interface HKSocketClient ()
 
@@ -17,7 +18,7 @@
 - (const char *)dispatchQueueLabel {
     return "HKSocketClientQueue";
 }
-- (void)writeCommand:(NSString *)command {
+- (void)writeMessage:(NSDictionary *)message {
     
     if (!self.socket.isConnected) {
         HKLog(@"Client disconnect");
@@ -25,7 +26,7 @@
     }
     
     HKSocketPacket * packet = [[HKSocketPacket alloc] init];
-    packet.command = command;
+    packet.message = message;
     [self writePacket:packet toSocket:self.socket];
 }
 
@@ -40,6 +41,12 @@
 }
 
 - (void)readPakcet:(HKSocketPacket *)packet socket:(GCDAsyncSocket *)socket {
+    if ([[packet.message objectForKey:@"command"] isEqualToString:@"screenshot"]) {
+        
+        
+        NSData * data = [GTMBase64 decodeString:[packet.message objectForKey:@"image"]];
+        [data writeToFile:@"/Users/AQY/Downloads/remote.jpg" atomically:YES];
+    }
 }
 
 // MARK: - GCDAsyncSocket

@@ -30,7 +30,10 @@
 }
 
 - (void)writePacket:(HKSocketPacket *)packet toSocket:(GCDAsyncSocket *)socket {
-    [socket writeData:[packet coding] withTimeout:30 tag:_writeTag ++];
+    NSData * data = [packet coding];
+    if (data) {
+        [socket writeData:data withTimeout:30 tag:_writeTag ++];
+    }
 }
 - (void)readPakcet:(HKSocketPacket *)packet socket:(GCDAsyncSocket *)socket {
     
@@ -69,7 +72,8 @@
 
 - (NSData *)coding {
     
-    NSData * commandData = [self.command dataUsingEncoding:NSUTF8StringEncoding];
+    NSData * commandData = [NSJSONSerialization dataWithJSONObject:self.message options:NSJSONWritingPrettyPrinted error:nil];
+    if (!commandData) return nil;
     
     UInt16 packetId = htons(0x8F2D);
     NSMutableData * data = [[NSMutableData alloc] initWithBytes:&packetId length:2];
@@ -104,7 +108,7 @@
     
     HKSocketPacket * packet = [[HKSocketPacket alloc] init];
     if (length > 0) {
-        packet.command = [[NSString alloc] initWithData:[data subdataWithRange:NSMakeRange(4, length)] encoding:NSUTF8StringEncoding];
+        packet.message = [NSJSONSerialization JSONObjectWithData:[data subdataWithRange:NSMakeRange(4, length)] options:NSJSONReadingAllowFragments error:nil];
     }
     return packet;
 }
