@@ -6,11 +6,14 @@
 #  Created by AQY on 2018/3/24.
 #  Copyright © 2018年 李铁柱. All rights reserved.
 
-rm -rf ~/Documents/inject/WxHook/AppHookSDK.framework
-rm -rf ~/Documents/inject/wx/Payload/WeChat.app/AppHookSDK.framework
+APP_DIR=~/Desktop/Hook/wx/Payload/WeChat.app
+HOOK_DIR=~/Desktop/Hook/WxHook
 
+rm -rf ${APP_DIR}/AppHookSDK.framework
+rm -rf ${HOOK_DIR}/AppHookSDK.framework
 
-cp -r `pwd`/LatestBuild/Debug-iphoneos/AppHookSDK.framework ~/Documents/inject/WxHook/AppHookSDK.framework
-cp -r `pwd`/LatestBuild/Debug-iphoneos/AppHookSDK.framework ~/Documents/inject/wx/Payload/WeChat.app/AppHookSDK.framework
+cp -rf ${BUILT_PRODUCTS_DIR}/AppHookSDK.framework ${APP_DIR}/AppHookSDK.framework
+cp -rf ${BUILT_PRODUCTS_DIR}/AppHookSDK.framework ${HOOK_DIR}/AppHookSDK.framework
+
 
 

@@ -45,8 +45,8 @@
 - (void)applicationFinishLaunch {
     
     client = [[HKSocketClient alloc] init];
-    objc_msgSend(client, sel_getUid("connectIp:port:"), @"10.0.0.25", 9002);
-    
+    objc_msgSend(client, sel_getUid("connectIp:port:"), @"192.168.3.2", 9002);
+    HKLog(@"asd");
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //        [client writeMessage:@{@"command" : @"location", @"longitude" : @"-74.186207", @"latitude" : @"40.754855"}];
     });

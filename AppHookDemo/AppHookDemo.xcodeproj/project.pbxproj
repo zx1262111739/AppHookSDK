@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51EEF5F7206BFB73000E791E /* AppHookSDK_Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51EEF5F6206BFB73000E791E /* AppHookSDK_Mac.framework */; };
 		623E7AFF2065F7AE00CE79A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 623E7AFE2065F7AE00CE79A0 /* main.m */; };
 		623E7B13206600DC00CE79A0 /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = 623E7B12206600DC00CE79A0 /* Application.m */; };
-		62F34EE220688FAA00F1A97D /* AppHookSDK_Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62F34EE120688FAA00F1A97D /* AppHookSDK_Mac.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,12 +25,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		51EEF5F6206BFB73000E791E /* AppHookSDK_Mac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppHookSDK_Mac.framework; sourceTree = "<group>"; };
 		623E7AFB2065F7AE00CE79A0 /* AppHookDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AppHookDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		623E7AFE2065F7AE00CE79A0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		623E7B11206600DC00CE79A0 /* Application.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
 		623E7B12206600DC00CE79A0 /* Application.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Application.m; sourceTree = "<group>"; };
 		623E7B2B20660A5400CE79A0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		62F34EE120688FAA00F1A97D /* AppHookSDK_Mac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppHookSDK_Mac.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62F34EE220688FAA00F1A97D /* AppHookSDK_Mac.framework in Frameworks */,
+				51EEF5F7206BFB73000E791E /* AppHookSDK_Mac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +74,7 @@
 		623E7B18206604DA00CE79A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				62F34EE120688FAA00F1A97D /* AppHookSDK_Mac.framework */,
+				51EEF5F6206BFB73000E791E /* AppHookSDK_Mac.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
