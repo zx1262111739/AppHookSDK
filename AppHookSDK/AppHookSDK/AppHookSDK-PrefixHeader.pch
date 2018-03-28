@@ -15,6 +15,10 @@
 #ifdef __OBJC__
 
 #define HKLog(format, ... ) NSLog((@"[Hook]: "format),##__VA_ARGS__)
+
+#define AppHookSDK_Location_longitude @"AppHookSDK_Location_longitude"
+#define AppHookSDK_Location_latitude @"AppHookSDK_Location_latitude"
+
 #endif
 
 #endif /* AppHookSDK_PrefixHeader_pch */

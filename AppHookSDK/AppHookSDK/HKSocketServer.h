@@ -10,4 +10,5 @@
 @interface HKSocketServer : HKSocket
 
 - (void)acceptPort:(UInt16)prot;
+- (void)writePacket:(HKSocketPacket *)packet;
 @end

@@ -18,10 +18,14 @@
     NSString * command = [message objectForKey:@"command"];
     dispatch_async(dispatch_get_main_queue(), ^{
         HKLog(@"receive command: %@", command);
-        if ([command isEqualToString:@"screenshot"]) {
+        if ([command isEqualToString:@"location"]) {
             
-            UIWindow * window;
-//            [window touchesEnded:nil withEvent:nil]
+            NSString * longitude = [message objectForKey:@"longitude"];
+            NSString * latitude = [message objectForKey:@"latitude"];
+            
+            [[NSUserDefaults standardUserDefaults] setObject:longitude forKey:AppHookSDK_Location_longitude];
+            [[NSUserDefaults standardUserDefaults] setObject:latitude forKey:AppHookSDK_Location_latitude];
+            [[NSUserDefaults standardUserDefaults] synchronize];
         }
     });
     

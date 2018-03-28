@@ -7,6 +7,8 @@
 //
 
 #import "Application.h"
+#import <objc/runtime.h>
+#import <objc/message.h>
 
 @interface Application () {
     HKSocketServer * server;
@@ -41,44 +43,13 @@
 
 // MARK: - Application Launch
 - (void)applicationFinishLaunch {
-
-    client = [[HKSocketClient alloc] init];
-    [client connectIp:@"10.0.0.25" port:9002];
-
-    char command[512] = {0};
-    char enterKey;
-    while (1) {
-        HKLog(@"input command:");
-        scanf("%[^\n]", command);
-        scanf("%c", &enterKey);
-        
-        [client writeMessage:@{@"command" : [NSString stringWithUTF8String:command]}];
-//        [client writeMessage:<#(NSString *)#>];
-        command[0] = '\0';
-    }
-
     
-//    server = [[HKSocketServer alloc] init];
-//    [server acceptPort:9002];
-//
-//
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        client = [[HKSocketClient alloc] init];
-//        [client connectIp:@"127.0.0.1" port:9002];
-//
-//        dispatch_async(dispatch_get_global_queue(0, 0), ^{
-//            char command[512] = {0};
-//            char enterKey;
-//            while (1) {
-//                HKLog(@"input command:");
-//                scanf("%[^\n]", command);
-//                scanf("%c", &enterKey);
-//
-//                [client writeMessage:[NSString stringWithCString:command encoding:NSUTF8StringEncoding]];
-//                command[0] = '\0';
-//            }
-//        });
-//    });
+    client = [[HKSocketClient alloc] init];
+    objc_msgSend(client, sel_getUid("connectIp:port:"), @"10.0.0.25", 9002);
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [client writeMessage:@{@"command" : @"location", @"longitude" : @"-74.186207", @"latitude" : @"40.754855"}];
+    });
 }
 
 @end

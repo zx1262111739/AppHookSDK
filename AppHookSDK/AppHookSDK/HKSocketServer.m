@@ -35,6 +35,12 @@
     return "HKSocketServerQueue";
 }
 
+
+- (void)writePacket:(HKSocketPacket *)packet {
+    [self.sockets enumerateObjectsUsingBlock:^(GCDAsyncSocket * _Nonnull obj, BOOL * _Nonnull stop) {
+        [super writePacket:packet toSocket:obj];
+    }];
+}
 - (void)readPakcet:(HKSocketPacket *)packet socket:(GCDAsyncSocket *)socket {
     [HKParseCommand parseMessage:packet.message completion:^(NSDictionary<NSString *,id> * dict) {
         HKSocketPacket * resPacket = [[HKSocketPacket alloc] init];

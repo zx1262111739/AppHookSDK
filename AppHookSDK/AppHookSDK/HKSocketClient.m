@@ -11,6 +11,8 @@
 
 @interface HKSocketClient ()
 
+@property (nonatomic, copy) NSString * ip;
+@property (nonatomic, assign) UInt16 port;
 @property (nonatomic, assign) BOOL forceDisconnect;
 @end
 @implementation HKSocketClient
@@ -32,6 +34,8 @@
 
 - (void)connectIp:(NSString *)ip port:(UInt16)port {
     
+    self.ip = ip;
+    self.port = port;
     NSError * error = nil;
     if (![self.socket connectToHost:ip onPort:port error:&error]) {
         if (error) {
@@ -41,21 +45,27 @@
 }
 
 - (void)readPakcet:(HKSocketPacket *)packet socket:(GCDAsyncSocket *)socket {
-    if ([[packet.message objectForKey:@"command"] isEqualToString:@"screenshot"]) {
-        
-        
-        NSData * data = [GTMBase64 decodeString:[packet.message objectForKey:@"image"]];
-        [data writeToFile:@"/Users/AQY/Downloads/remote.jpg" atomically:YES];
-    }
+    if (packet.message)
+    HKLog(@"%@", [packet.message objectForKey:@"log"]);
 }
 
 // MARK: - GCDAsyncSocket
 - (void)socket:(GCDAsyncSocket *)sock didConnectToHost:(NSString *)host port:(uint16_t)port {
     [sock readDataWithTimeout:-1 tag:_readTag ++];
+    HKLog(@"connect");
 }
 
 - (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err {
     HKLog(@"Client disconnect");
+    [NSTimer scheduledTimerWithTimeInterval:3 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        if (self.socket.isConnected) {
+            [timer invalidate];
+            timer = nil;
+        } else {
+            [self connectIp:self.ip port:self.port];
+        }
+    }];
+    [[NSRunLoop currentRunLoop] run];
 }
 
 
